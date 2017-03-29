@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "myAbc",
+            "otherEntityName": "myAbc",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "author"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170328172317",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "author",
+    "pagination": "no"
+}
