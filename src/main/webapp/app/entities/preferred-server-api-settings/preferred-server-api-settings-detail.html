@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span data-translate="cApp.preferredServerAPISettings.detail.title">Preferred Server API Settings</span> {{vm.preferredServerAPISettings.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cApp.preferredServerAPISettings.preferredServerAPISettingsHTTPPort">Preferred Server API Settings HTTP Port</span></dt>
+        <dd>
+            <span>{{vm.preferredServerAPISettings.preferredServerAPISettingsHTTPPort}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="preferred-server-api-settings-detail.edit({id:vm.preferredServerAPISettings.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
