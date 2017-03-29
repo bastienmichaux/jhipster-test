@@ -1,0 +1,21 @@
+{
+    "cApp": {
+        "userIPV6Address" : {
+            "home": {
+                "title": "User IPV 6 Addresses",
+                "createLabel": "Create a new User IPV 6 Address",
+                "createOrEditLabel": "Create or edit a User IPV 6 Address"
+            },
+            "created": "A new User IPV 6 Address is created with identifier {{ param }}",
+            "updated": "A User IPV 6 Address is updated with identifier {{ param }}",
+            "deleted": "A User IPV 6 Address is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User IPV 6 Address {{ id }}?"
+            },
+            "detail": {
+                "title": "User IPV 6 Address"
+            },
+            "addressIPV6": "Address IPV 6"
+        }
+    }
+}

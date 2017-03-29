@@ -1,0 +1,22 @@
+{
+    "cApp": {
+        "aPISettings" : {
+            "home": {
+                "title": "API Settings",
+                "createLabel": "Create a new API Settings",
+                "createOrEditLabel": "Create or edit a API Settings"
+            },
+            "created": "A new API Settings is created with identifier {{ param }}",
+            "updated": "A API Settings is updated with identifier {{ param }}",
+            "deleted": "A API Settings is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete API Settings {{ id }}?"
+            },
+            "detail": {
+                "title": "API Settings"
+            },
+            "preferredAPI": "Preferred API",
+            "port8080APIListener": "Port 8080 API Listener"
+        }
+    }
+}

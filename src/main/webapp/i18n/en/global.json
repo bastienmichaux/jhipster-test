@@ -9,6 +9,7 @@
                 "main": "Entities",
                 "myAbc": "My Abc",
                 "author": "Author",
+                "apiSettings": "API Settings",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
