@@ -104,8 +104,8 @@
                     resolve: {
                         entity: function () {
                             return {
-                                prefix_myBook_Suffix: null,
-                                prefix__myField_123_MySuffix: null,
+                                Prefix_MyBook_Suffix: null,
+                                Prefix__MyField123_MySuffix: null,
                                 id: null
                             };
                         }

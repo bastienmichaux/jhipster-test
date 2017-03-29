@@ -11,7 +11,7 @@ import java.util.Objects;
  * A MyAbc.
  */
 @Entity
-@Table(name = "MyAbc")
+@Table(name = "my_abc")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class MyAbc implements Serializable {
 
@@ -22,10 +22,10 @@ public class MyAbc implements Serializable {
     private Long id;
 
     @Column(name = "prefix_my_book_suffix")
-    private String prefix_myBook_Suffix;
+    private String Prefix_MyBook_Suffix;
 
     @Column(name = "prefix_my_field_123_my_suffix")
-    private String prefix__myField_123_MySuffix;
+    private String Prefix__MyField123_MySuffix;
 
     @ManyToOne
     private Author author;
@@ -38,30 +38,30 @@ public class MyAbc implements Serializable {
         this.id = id;
     }
 
-    public String getPrefix_myBook_Suffix() {
-        return prefix_myBook_Suffix;
+    public String getPrefix_MyBook_Suffix() {
+        return Prefix_MyBook_Suffix;
     }
 
-    public MyAbc prefix_myBook_Suffix(String prefix_myBook_Suffix) {
-        this.prefix_myBook_Suffix = prefix_myBook_Suffix;
+    public MyAbc Prefix_MyBook_Suffix(String Prefix_MyBook_Suffix) {
+        this.Prefix_MyBook_Suffix = Prefix_MyBook_Suffix;
         return this;
     }
 
-    public void setPrefix_myBook_Suffix(String prefix_myBook_Suffix) {
-        this.prefix_myBook_Suffix = prefix_myBook_Suffix;
+    public void setPrefix_MyBook_Suffix(String Prefix_MyBook_Suffix) {
+        this.Prefix_MyBook_Suffix = Prefix_MyBook_Suffix;
     }
 
-    public String getPrefix__myField_123_MySuffix() {
-        return prefix__myField_123_MySuffix;
+    public String getPrefix__MyField123_MySuffix() {
+        return Prefix__MyField123_MySuffix;
     }
 
-    public MyAbc prefix__myField_123_MySuffix(String prefix__myField_123_MySuffix) {
-        this.prefix__myField_123_MySuffix = prefix__myField_123_MySuffix;
+    public MyAbc Prefix__MyField123_MySuffix(String Prefix__MyField123_MySuffix) {
+        this.Prefix__MyField123_MySuffix = Prefix__MyField123_MySuffix;
         return this;
     }
 
-    public void setPrefix__myField_123_MySuffix(String prefix__myField_123_MySuffix) {
-        this.prefix__myField_123_MySuffix = prefix__myField_123_MySuffix;
+    public void setPrefix__MyField123_MySuffix(String Prefix__MyField123_MySuffix) {
+        this.Prefix__MyField123_MySuffix = Prefix__MyField123_MySuffix;
     }
 
     public Author getAuthor() {
@@ -101,8 +101,8 @@ public class MyAbc implements Serializable {
     public String toString() {
         return "MyAbc{" +
             "id=" + id +
-            ", prefix_myBook_Suffix='" + prefix_myBook_Suffix + "'" +
-            ", prefix__myField_123_MySuffix='" + prefix__myField_123_MySuffix + "'" +
+            ", Prefix_MyBook_Suffix='" + Prefix_MyBook_Suffix + "'" +
+            ", Prefix__MyField123_MySuffix='" + Prefix__MyField123_MySuffix + "'" +
             '}';
     }
 }

@@ -19,8 +19,8 @@
             <thead>
                 <tr>
                     <th><span data-translate="global.field.id">ID</span></th>
-                    <th><span data-translate="cApp.myAbc.prefix_myBook_Suffix">Prefix My Book Suffix</span></th>
-                    <th><span data-translate="cApp.myAbc.prefix__myField_123_MySuffix">Prefix My Field 123 My Suffix</span></th>
+                    <th><span data-translate="cApp.myAbc.Prefix_MyBook_Suffix">Prefix My Book Suffix</span></th>
+                    <th><span data-translate="cApp.myAbc.Prefix__MyField123_MySuffix">Prefix My Field 123 My Suffix</span></th>
                     <th><span data-translate="cApp.myAbc.author">Author</span></th>
                     <th></th>
                 </tr>
@@ -28,8 +28,8 @@
             <tbody>
                 <tr ng-repeat="myAbc in vm.myAbcs track by myAbc.id">
                     <td><a ui-sref="my-abc-detail({id:myAbc.id})">{{myAbc.id}}</a></td>
-                    <td>{{myAbc.prefix_myBook_Suffix}}</td>
-                    <td>{{myAbc.prefix__myField_123_MySuffix}}</td>
+                    <td>{{myAbc.Prefix_MyBook_Suffix}}</td>
+                    <td>{{myAbc.Prefix__MyField123_MySuffix}}</td>
                     <td>
                         <a ui-sref="author-detail({id:myAbc.author.id})">{{myAbc.author.name}}</a>
                     </td>

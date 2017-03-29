@@ -80,8 +80,8 @@ public class MyAbcResourceIntTest {
      */
     public static MyAbc createEntity(EntityManager em) {
         MyAbc myAbc = new MyAbc()
-            .prefix_myBook_Suffix(DEFAULT_PREFIX_MY_BOOK_SUFFIX)
-            .prefix__myField_123_MySuffix(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX);
+            .Prefix_MyBook_Suffix(DEFAULT_PREFIX_MY_BOOK_SUFFIX)
+            .Prefix__MyField123_MySuffix(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX);
         return myAbc;
     }
 
@@ -105,8 +105,8 @@ public class MyAbcResourceIntTest {
         List<MyAbc> myAbcList = myAbcRepository.findAll();
         assertThat(myAbcList).hasSize(databaseSizeBeforeCreate + 1);
         MyAbc testMyAbc = myAbcList.get(myAbcList.size() - 1);
-        assertThat(testMyAbc.getPrefix_myBook_Suffix()).isEqualTo(DEFAULT_PREFIX_MY_BOOK_SUFFIX);
-        assertThat(testMyAbc.getPrefix__myField_123_MySuffix()).isEqualTo(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX);
+        assertThat(testMyAbc.getPrefix_MyBook_Suffix()).isEqualTo(DEFAULT_PREFIX_MY_BOOK_SUFFIX);
+        assertThat(testMyAbc.getPrefix__MyField123_MySuffix()).isEqualTo(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX);
     }
 
     @Test
@@ -139,8 +139,8 @@ public class MyAbcResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(myAbc.getId().intValue())))
-            .andExpect(jsonPath("$.[*].prefix_myBook_Suffix").value(hasItem(DEFAULT_PREFIX_MY_BOOK_SUFFIX.toString())))
-            .andExpect(jsonPath("$.[*].prefix__myField_123_MySuffix").value(hasItem(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX.toString())));
+            .andExpect(jsonPath("$.[*].Prefix_MyBook_Suffix").value(hasItem(DEFAULT_PREFIX_MY_BOOK_SUFFIX.toString())))
+            .andExpect(jsonPath("$.[*].Prefix__MyField123_MySuffix").value(hasItem(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX.toString())));
     }
 
     @Test
@@ -154,8 +154,8 @@ public class MyAbcResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(myAbc.getId().intValue()))
-            .andExpect(jsonPath("$.prefix_myBook_Suffix").value(DEFAULT_PREFIX_MY_BOOK_SUFFIX.toString()))
-            .andExpect(jsonPath("$.prefix__myField_123_MySuffix").value(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX.toString()));
+            .andExpect(jsonPath("$.Prefix_MyBook_Suffix").value(DEFAULT_PREFIX_MY_BOOK_SUFFIX.toString()))
+            .andExpect(jsonPath("$.Prefix__MyField123_MySuffix").value(DEFAULT_PREFIX_MY_FIELD_123_MY_SUFFIX.toString()));
     }
 
     @Test
@@ -176,8 +176,8 @@ public class MyAbcResourceIntTest {
         // Update the myAbc
         MyAbc updatedMyAbc = myAbcRepository.findOne(myAbc.getId());
         updatedMyAbc
-            .prefix_myBook_Suffix(UPDATED_PREFIX_MY_BOOK_SUFFIX)
-            .prefix__myField_123_MySuffix(UPDATED_PREFIX_MY_FIELD_123_MY_SUFFIX);
+            .Prefix_MyBook_Suffix(UPDATED_PREFIX_MY_BOOK_SUFFIX)
+            .Prefix__MyField123_MySuffix(UPDATED_PREFIX_MY_FIELD_123_MY_SUFFIX);
 
         restMyAbcMockMvc.perform(put("/api/my-abcs")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -188,8 +188,8 @@ public class MyAbcResourceIntTest {
         List<MyAbc> myAbcList = myAbcRepository.findAll();
         assertThat(myAbcList).hasSize(databaseSizeBeforeUpdate);
         MyAbc testMyAbc = myAbcList.get(myAbcList.size() - 1);
-        assertThat(testMyAbc.getPrefix_myBook_Suffix()).isEqualTo(UPDATED_PREFIX_MY_BOOK_SUFFIX);
-        assertThat(testMyAbc.getPrefix__myField_123_MySuffix()).isEqualTo(UPDATED_PREFIX_MY_FIELD_123_MY_SUFFIX);
+        assertThat(testMyAbc.getPrefix_MyBook_Suffix()).isEqualTo(UPDATED_PREFIX_MY_BOOK_SUFFIX);
+        assertThat(testMyAbc.getPrefix__MyField123_MySuffix()).isEqualTo(UPDATED_PREFIX_MY_FIELD_123_MY_SUFFIX);
     }
 
     @Test

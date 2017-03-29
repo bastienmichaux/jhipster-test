@@ -15,8 +15,8 @@
             "detail": {
                 "title": "My Abc"
             },
-            "prefix_myBook_Suffix": "Prefix My Book Suffix",
-            "prefix__myField_123_MySuffix": "Prefix My Field 123 My Suffix",
+            "Prefix_MyBook_Suffix": "Prefix My Book Suffix",
+            "Prefix__MyField123_MySuffix": "Prefix My Field 123 My Suffix",
             "author": "Author"
         }
     }
