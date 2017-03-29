@@ -10,6 +10,7 @@
                 "myAbc": "My Abc",
                 "author": "Author",
                 "apiSettings": "API Settings",
+                "apiServerSettings": "API Server Settings",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
