@@ -11,7 +11,7 @@ import java.util.Objects;
  * A MyAbc.
  */
 @Entity
-@Table(name = "my_abc")
+@Table(name = "MyAbcCamelCase")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class MyAbc implements Serializable {
 

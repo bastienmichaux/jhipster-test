@@ -21,6 +21,6 @@
     "changelogDate": "20170328172123",
     "dto": "no",
     "service": "no",
-    "entityTableName": "my_abc",
+    "entityTableName": "MyAbcCamelCase",
     "pagination": "no"
 }
