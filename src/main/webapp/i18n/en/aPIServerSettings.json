@@ -1,0 +1,21 @@
+{
+    "cApp": {
+        "aPIServerSettings" : {
+            "home": {
+                "title": "API Server Settings",
+                "createLabel": "Create a new API Server Settings",
+                "createOrEditLabel": "Create or edit a API Server Settings"
+            },
+            "created": "A new API Server Settings is created with identifier {{ param }}",
+            "updated": "A API Server Settings is updated with identifier {{ param }}",
+            "deleted": "A API Server Settings is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete API Server Settings {{ id }}?"
+            },
+            "detail": {
+                "title": "API Server Settings"
+            },
+            "myAPIServerSettings": "My API Server Settings"
+        }
+    }
+}
