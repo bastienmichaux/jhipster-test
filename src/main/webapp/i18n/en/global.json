@@ -12,6 +12,7 @@
                 "apiSettings": "API Settings",
                 "apiServerSettings": "API Server Settings",
                 "preferredServerApiSettings": "Preferred Server API Settings",
+                "fooBarApiSettings": "Foo Bar API Settings",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
