@@ -1,0 +1,131 @@
+Input :
+
+================= MyAbc =================
+Fields
+prefix_myBook_Suffix (String) 
+prefix__myField_123_MySuffix (String) 
+
+Relationships
+author (Author) many-to-one 
+
+
+Liquibase : src/main/resources/config/liquibase/master.xml
+
+	<include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170328170723_added_entity_MyAbc.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170328170723_added_entity_constraints_MyAbc.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+
+Cache configuration : src/main/java/com/mycompany/myapp/config/CacheConfiguration.java
+
+public class CacheConfiguration {
+
+
+    @Bean
+    public JCacheManagerCustomizer cacheManagerCustomizer() {
+        return cm -> {
+        	...
+            cm.createCache(com.mycompany.myapp.domain.MyAbc.class.getName(), jcacheConfiguration);
+            // jhipster-needle-ehcache-add-entry
+        };
+    }
+}
+
+src/main/webapp/app/layouts/navbar/navbar.html
+
+<nav class="navbar navbar-default" role="navigation">
+	...
+    <ul class="dropdown-menu" uib-dropdown-menu>
+        ...
+        <li ui-sref-active="active">
+            <a ui-sref="my-abc" ng-click="vm.collapseNavbar()">
+                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                <span data-translate="global.menu.entities.myAbc">My Abc</span>
+            </a>
+        </li>
+        ...
+    </ul>
+
+src/main/webapp/i18n/en/global.json
+
+{
+    "global": {
+    	...
+        "menu": {
+        	...
+            "entities": {
+                "main": "Entities",
+                "myAbc": "My Abc",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+    ...
+}
+
+
+ANOTHER ENTITY ç!ç!98989
+
+================= Author =================
+Fields
+name (String) 
+
+Relationships
+myAbc (MyAbc) one-to-many 
+
+
+
+src/main/resources/config/liquibase/master.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    ...
+    <include file="classpath:config/liquibase/changelog/20170328172317_added_entity_Author.xml" relativeToChangelogFile="false"/>
+
+
+
+src/main/java/com/mycompany/myapp/config/CacheConfiguration.java
+
+...
+public class CacheConfiguration {
+	...
+    @Bean
+    public JCacheManagerCustomizer cacheManagerCustomizer() {
+        return cm -> {
+        	...
+            cm.createCache(com.mycompany.myapp.domain.Author.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Author.class.getName() + ".myAbcs", jcacheConfiguration);
+            // jhipster-needle-ehcache-add-entry
+        }
+    }
+    ...
+}
+
+
+src/main/webapp/app/layouts/navbar/navbar.html
+
+...
+							<li ui-sref-active="active">
+                                <a ui-sref="author" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span data-translate="global.menu.entities.author">Author</span>
+                                </a>
+                            </li>
+...
+
+
+src/main/webapp/i18n/en/global.json
+
+{
+    "global": {
+    	...
+        "menu": {
+        	...
+            "entities": {
+            	...
+                "author": "Author",
+
+

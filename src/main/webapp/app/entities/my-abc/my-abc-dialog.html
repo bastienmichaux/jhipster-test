@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMyAbcLabel" data-translate="cApp.myAbc.home.createOrEditLabel">Create or edit a My Abc</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.myAbc.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.myAbc.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cApp.myAbc.prefix_myBook_Suffix" for="field_prefix_myBook_Suffix">Prefix My Book Suffix</label>
+            <input type="text" class="form-control" name="prefix_myBook_Suffix" id="field_prefix_myBook_Suffix"
+                    ng-model="vm.myAbc.prefix_myBook_Suffix"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="cApp.myAbc.prefix__myField_123_MySuffix" for="field_prefix__myField_123_MySuffix">Prefix My Field 123 My Suffix</label>
+            <input type="text" class="form-control" name="prefix__myField_123_MySuffix" id="field_prefix__myField_123_MySuffix"
+                    ng-model="vm.myAbc.prefix__myField_123_MySuffix"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="cApp.myAbc.author" for="field_author">Author</label>
+            <select class="form-control" id="field_author" name="author" ng-model="vm.myAbc.author" ng-options="author as author.name for author in vm.authors track by author.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

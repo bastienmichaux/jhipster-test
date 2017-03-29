@@ -1,0 +1,23 @@
+{
+    "cApp": {
+        "myAbc" : {
+            "home": {
+                "title": "My Abcs",
+                "createLabel": "Create a new My Abc",
+                "createOrEditLabel": "Create or edit a My Abc"
+            },
+            "created": "A new My Abc is created with identifier {{ param }}",
+            "updated": "A My Abc is updated with identifier {{ param }}",
+            "deleted": "A My Abc is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete My Abc {{ id }}?"
+            },
+            "detail": {
+                "title": "My Abc"
+            },
+            "prefix_myBook_Suffix": "Prefix My Book Suffix",
+            "prefix__myField_123_MySuffix": "Prefix My Field 123 My Suffix",
+            "author": "Author"
+        }
+    }
+}

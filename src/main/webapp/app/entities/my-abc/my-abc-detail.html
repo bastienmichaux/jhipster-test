@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="cApp.myAbc.detail.title">My Abc</span> {{vm.myAbc.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cApp.myAbc.prefix_myBook_Suffix">Prefix My Book Suffix</span></dt>
+        <dd>
+            <span>{{vm.myAbc.prefix_myBook_Suffix}}</span>
+        </dd>
+        <dt><span data-translate="cApp.myAbc.prefix__myField_123_MySuffix">Prefix My Field 123 My Suffix</span></dt>
+        <dd>
+            <span>{{vm.myAbc.prefix__myField_123_MySuffix}}</span>
+        </dd>
+        <dt><span data-translate="cApp.myAbc.author">Author</span></dt>
+        <dd>
+            <a ui-sref="author-detail({id:vm.myAbc.author.id})">{{vm.myAbc.author.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="my-abc-detail.edit({id:vm.myAbc.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
