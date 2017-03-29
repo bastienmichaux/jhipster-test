@@ -1,0 +1,21 @@
+{
+    "cApp": {
+        "fooBarAPISettings2" : {
+            "home": {
+                "title": "Foo Bar API Settings 2 S",
+                "createLabel": "Create a new Foo Bar API Settings 2",
+                "createOrEditLabel": "Create or edit a Foo Bar API Settings 2"
+            },
+            "created": "A new Foo Bar API Settings 2 is created with identifier {{ param }}",
+            "updated": "A Foo Bar API Settings 2 is updated with identifier {{ param }}",
+            "deleted": "A Foo Bar API Settings 2 is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Foo Bar API Settings 2 {{ id }}?"
+            },
+            "detail": {
+                "title": "Foo Bar API Settings 2"
+            },
+            "fooBarAPISettingsFieldName": "Foo Bar API Settings Field Name"
+        }
+    }
+}

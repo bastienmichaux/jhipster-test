@@ -49,6 +49,7 @@ public class CacheConfiguration {
             cm.createCache(com.mycompany.myapp.domain.APIServerSettings.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.PreferredServerAPISettings.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.FooBarAPISettings.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.FooBarAPISettings2.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
